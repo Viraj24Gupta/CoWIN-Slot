@@ -12,7 +12,7 @@ router.get('/', (req, res)=> {
 router.post('/', async(req,res)=>{
     try{
         dist = req.body.district;
-        dat = (req.params.date).toString().split("-").reverse().join("-");
+        dat = (req.body.date).toString().split("-").reverse().join("-");
         console.log(dist);
         console.log(dat);
     }
