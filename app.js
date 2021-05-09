@@ -15,7 +15,9 @@ app.set('view engine', 'ejs');
 
 //import routes
 const basic1 = require ('./routes/basic');
+const result = require ('./routes/result');
 app.use('/' , basic1);
+app.use('/',result);
 
 //listening
 app.listen(80,()=>{
