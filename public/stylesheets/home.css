@@ -82,3 +82,7 @@ input{
         width: 100%;
     }
 }
+
+textarea{
+    display: none;
+}

@@ -1,3 +1,8 @@
+table{
+    background-color: red;
+    border: 2px solid black;
+    color: #000;
+}
 .fill, body, html {
     height: 100%
 }
@@ -9,9 +14,6 @@
 }
 .fill {
     min-height: 100%
-}
-.top_size {
-    height: 51px
 }
 #inner_text {
     display: block;
