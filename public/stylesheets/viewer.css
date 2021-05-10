@@ -1,68 +1,15 @@
-table{
-    background-color: red;
-    border: 2px solid black;
-    color: #000;
+table,th,td{
+    border: 1px solid black;
+    font-size: 15px;
+    text-align: center;
+}
+td{
+    padding: 5px;
 }
 .fill, body, html {
     height: 100%
 }
-#json_vl, .td_head, .td_row_even, .td_row_odd {
-    font-size: small
-}
-#json_pnl{
-    float: left
-}
-.fill {
-    min-height: 100%
-}
-#inner_text {
-    display: block;
-    position: absolute;
-    height: auto;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-top: 51px;
-    margin-bottom: 0
-}
-#json_pnl {
-    background-color: #ccc;
-    width: 33.3%
-}
-#table_pnl{
-    background-color: #E8E8E8;
-    float: left;
-    width: 50%
-}
-#inner_tbl {
-    padding-left: 2px
-}
-.td_row_even {
+.td_row_even, .td_row_odd  {
     padding: 2px;
-    background-color: #F6F4F0
-}
-.td_row_odd {
-    padding: 2px;
-    background-color: #FFF
-}
-.td_head {
-    padding: 2px;
-    font-weight: 700
-}
-input, p, select, td, textarea, th {
-    font-size: 1em
-}
-table, td, th {
-    border: 1px solid gray
-}
-form, h1, h2, h3, h4, h5, li, p, ul {
-    margin: 0;
-    padding: 0
-}
-p {
-    margin: 0 0 1em
-}
-table {
-    font-size: 100%
+    background-color: transparent;
 }
