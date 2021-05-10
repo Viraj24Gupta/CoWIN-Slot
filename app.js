@@ -2,8 +2,11 @@ const express = require('express');
 const app= express();
 const bp = require('body-parser');
 const path = require('path');
+const favicon = require('serve-favicon');
 
-//middleware for body_parser
+
+//middleware
+app.use(favicon(path.join(__dirname,'public/images','favicon.ico')));
 app.use(bp.urlencoded({extended:true}));
 app.use(bp.json());
 
@@ -19,5 +22,5 @@ app.use('/' , basic1);
 
 //listening
 app.listen(80,()=>{
-  console.log("http://localhost");
+    console.log("http://localhost");
 });
