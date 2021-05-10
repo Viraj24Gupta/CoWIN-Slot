@@ -21,8 +21,7 @@
 <h3>
     Click the button to create a dynamic table using data extracted from a JSON array.
 </h3>
-<input type='button' onclick='tableFromJson()'
-       value='Create Table from JSON data' />
+<input type='button' onclick='tableFromJson()' value='Create Table from JSON data' />
 
 <p id='showData'></p>
 
@@ -31,14 +30,22 @@
 <script>
         let tableFromJson = () => {
         	// the json data.
-            const myBooks = [{"center_id":624471,"name":"APHC Bhovapur","address":"HASANPUR BHOWAPUR, GHAZIABAD","state_name":"Uttar Pradesh","district_name":"Ghaziabad","block_name":"Dasna","pincode":201015,"from":"09:00:00","to":"17:00:00","lat":28,"long":77,"fee_type":"Free","session_id":"7d1ac791-79c6-4433-9850-b487163b24c5","date":"08-05-2021","available_capacity":5,"fee":"0","min_age_limit":45,"vaccine":"COVAXIN","slots":["09:00AM-11:00AM","11:00AM-01:00PM","01:00PM-03:00PM","03:00PM-05:00PM"]},{"center_id":567947,"name":"CHC Muradnagar","address":"Community Health Center Muradnagar Ghaziabad","state_name":"Uttar Pradesh","district_name":"Ghaziabad","block_name":"Muradnagar","pincode":201206,"from":"09:00:00","to":"17:00:00","lat":28,"long":77,"fee_type":"Free","session_id":"3c1e59fd-b2b1-404a-8c97-f8a9744763d8","date":"08-05-2021","available_capacity":87,"fee":"0","min_age_limit":45,"vaccine":"COVISHIELD","slots":["09:00AM-11:00AM","11:00AM-01:00PM","01:00PM-03:00PM","03:00PM-05:00PM"]},{"center_id":630467,"name":"UPHC Kaila Bhatta","address":"Kaila Bhatta Village Madhopura Ghaziabad","state_name":"Uttar Pradesh","district_name":"Ghaziabad","block_name":"Kaila Bhatta","pincode":201001,"from":"09:00:00","to":"17:00:00","lat":28,"long":77,"fee_type":"Free","session_id":"450600e5-141d-4a1b-8be0-b611cadfb625","date":"08-05-2021","available_capacity":74,"fee":"0","min_age_limit":45,"vaccine":"COVAXIN","slots":["09:00AM-11:00AM","11:00AM-01:00PM","01:00PM-03:00PM","03:00PM-05:00PM"]},{"center_id":562340,"name":"District Woman Hospital GZB","address":"535 Gaushala Rd Kailash Nagar Madhopura Ghaziabad","state_name":"Uttar Pradesh","district_name":"Ghaziabad","block_name":"District Women Hospital (PPC)","pincode":201001,"from":"09:00:00","to":"17:00:00","lat":28,"long":77,"fee_type":"Free","session_id":"9ad5bee1-27a5-4956-bb7c-e427b3e430d7","date":"08-05-2021","available_capacity":22,"fee":"0","min_age_limit":45,"vaccine":"COVISHIELD","slots":["09:00AM-11:00AM","11:00AM-01:00PM","01:00PM-03:00PM","03:00PM-05:00PM"]},{"center_id":609586,"name":"UPHC Bulandshar Indust. Area","address":"Bls Inds Area Yadav Ngr Near Rto Office Ghaziabad","state_name":"Uttar Pradesh","district_name":"Ghaziabad","block_name":"Bulandsahar Industrial Area","pincode":201001,"from":"09:00:00","to":"17:00:00","lat":0,"long":0,"fee_type":"Free","session_id":"56170939-b2b9-4e0f-b103-176267518b22","date":"08-05-2021","available_capacity":42,"fee":"0","min_age_limit":45,"vaccine":"COVISHIELD","slots":["09:00AM-11:00AM","11:00AM-01:00PM","01:00PM-03:00PM","03:00PM-05:00PM"]},{"center_id":228268,"name":"UPHC Maharajpur 1st","address":"Masjid Wali Gali Ward-28 Opposite Ambedkar Colony Maharajpur Ghaziabad","state_name":"Uttar Pradesh","district_name":"Ghaziabad","block_name":"Maharaj Pur","pincode":201010,"from":"09:00:00","to":"17:00:00","lat":28,"long":77,"fee_type":"Free","session_id":"f136545c-df39-4465-9037-609fb3ecf005","date":"08-05-2021","available_capacity":63,"fee":"0","min_age_limit":45,"vaccine":"COVISHIELD","slots":["09:00AM-11:00AM","11:00AM-01:00PM","01:00PM-03:00PM","03:00PM-05:00PM"]}];
+            const myBooks = [{"districts":[{"district_id":9,"district_name":"Anantapur"},{"district_id":10,"district_name":"Chittoor"},
+                    {"district_id":11,"district_name":"East Godavari"},{"district_id":5,"district_name":"Guntur"},{"district_id":4,"district_name":"Krishna"},
+                    {"district_id":7,"district_name":"Kurnool"},{"district_id":12,"district_name":"Prakasam"},
+                    {"district_id":13,"district_name":"Sri Potti Sriramulu Nellore"},{"district_id":14,"district_name":"Srikakulam"},
+                    {"district_id":8,"district_name":"Visakhapatnam"},{"district_id":15,"district_name":"Vizianagaram"}
+                    ,{"district_id":16,"district_name":"West Godavari"},{"district_id":6,"district_name":"YSR District, Kadapa (Cuddapah)"}],"ttl":24}];
             // Extract value from table header.
             // ('Book ID', 'Book Name', 'Category' and 'Price')
             let col = [];
-            for (let i = 0; i < myBooks.length; i++) {
-                for (let key in myBooks[i]) {
-                    if (col.indexOf(key) === -1) {
-                        col.push(key);
+
+            for( let j=0 ; j<1 ; j++){
+                for (let i = 0; i < myBooks.length; i++) {
+                    for (let key in myBooks[i]) {
+                        if (col.indexOf(key) === -1) {
+                            col.push(key);
+                        }
                     }
                 }
             }
