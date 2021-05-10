@@ -1,7 +1,6 @@
 const express= require('express');
 const router = express.Router();
 const got = require('got');
-const ejs = require('ejs');
 
 let dist;
 let dat;

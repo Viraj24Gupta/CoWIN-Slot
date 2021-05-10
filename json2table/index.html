@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="viewer.css" rel="stylesheet">
+    <title>Result</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<button type="button" class="btn btn-default navbar-btn" id="load_json_btn"><span class="glyphicon glyphicon-play"></span></button>
+
+<div class="container-fluid fill" style="padding-left: 10px; padding-right:10px">
+    <div id="all_panels">
+        <div id="json_pnl">
+            <div id="inner_text">
+                <textarea id="json_vl" wrap="hard" placeholder="Copy JSON here and press the run button [ > ]"></textarea>
+            </div>
+        </div>
+        <div >
+            <div id="table_pnl">
+                <div class="top_size"></div>
+                <div id="inner_tbl"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="http://jquery.jcubic.pl/js/jquery.splitter-0.14.0.js"></script>
+<script src="viewer.js"></script>
+</body>
+</html>
