@@ -21,6 +21,6 @@ const basic1 = require ('./routes/basic');
 app.use('/' , basic1);
 
 //listening
-app.listen(80,()=>{
-    console.log("http://localhost");
+app.listen(3000,()=>{
+    console.log("http://localhost:3000");
 });
