@@ -36,7 +36,7 @@ body{
     color: white;
     font-weight: lighter;
 }
-.form input[type = "text"],.form input[type = "date"]{
+.form input[type = "text"],.form input[type = "date"],.selectize-control{
     background: none;
     display: block;
     margin: 20px auto;
@@ -49,11 +49,6 @@ body{
     border-radius: 25px;
     transition: 0.25s;
 }
-.form input[type = "text"]:focus,.form input[type = "date"]:focus{
-    width: 280px;
-    border-color: aqua;
-}
-
 .form input[type = "submit"]{
     background: none;
     display: block;
