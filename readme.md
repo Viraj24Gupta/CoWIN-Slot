@@ -1,4 +1,4 @@
-# CoWIN-Slot
+# CoWIN-Slot (https://dry-eyrie-96780.herokuapp.com/)
 ### this is a simple webapp that shows the available slots for vaccination by district
 #### steps to run:
 1. clone repository<br/>
